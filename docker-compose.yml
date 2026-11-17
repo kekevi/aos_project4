@@ -1,0 +1,13 @@
+name: dev-env
+
+services:
+  dev-env:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: dev-environment:latest
+    container_name: dev-env
+    tty: true
+    volumes:
+      - .:/workspace:rw
+    working_dir: /workspace
