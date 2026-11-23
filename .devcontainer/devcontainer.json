@@ -1,0 +1,14 @@
+{
+    "name": "aos_project4",
+    "dockerComposeFile": "../docker-compose.yml",
+    "service": "dev-env",
+    "workspaceFolder": "/workspace",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools"
+            ]
+        }
+    },
+    "shutdownAction": "none"
+}
