@@ -5,7 +5,7 @@ on:
     branches: [ main, master ]
     paths:
       - '.devcontainer/Dockerfile'
-      - '.github/workflows/build-devcontainer.yml'
+      - '.github/workflows/build-devcontainer.yaml'
   workflow_dispatch: # Allows you to trigger a build manually from the Actions tab
 
 permissions:
