@@ -10,6 +10,12 @@ CTestTestfile.cmake
 _deps/
 Makefile
 
+# Generated Protobuf & gRPC C++ files
+*.pb.h
+*.pb.cc
+*.grpc.pb.h
+*.grpc.pb.cc
+
 # Ninja build files
 build.ninja
 rules.ninja
