@@ -1,0 +1,4 @@
+{
+  "name": "gRPC C++ Dev",
+  "image": "ghcr.io/kekevi/grpc-dev:latest"
+}
