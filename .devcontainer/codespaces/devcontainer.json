@@ -1,4 +1,12 @@
 {
   "name": "gRPC C++ Dev",
-  "image": "ghcr.io/kekevi/grpc-dev:latest"
+  "image": "ghcr.io/kekevi/grpc-dev:latest",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools",
+        "ms-vscode.cmake-tools"
+      ]
+    }
+  }
 }
