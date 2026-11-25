@@ -2,7 +2,33 @@ syntax = "proto3";
 
 package masterworker;
 
-service Master {
-    rpc getTask (WorkerInfo) returns (Task) {}
-    rpc notifyProgress
+service MasterService {
+  rpc GetTask(GetTaskRequest) returns (GetTaskResponse) {}
+  rpc NotifyProgress(NotifyProgressRequest) returns (NotifyProgressResponse) {}
+}
+
+message GetTaskRequest {
+  WorkerInfo info = 1;
+}
+message GetTaskResponse {
+  Task task = 1;
+}
+
+message NotifyProgressRequest {
+  WorkerInfo info = 1;
+}
+message NotifyProgressResponse {
+  enum Action {
+    ACTION_UNSPECIFIED = 0;
+    ACTION_CONTINUE = 1;
+    ACTION_STOP = 2;
+  }
+}
+
+message WorkerInfo {
+  string name = 1; // likely the worker's host:port
+}
+
+message Task {
+  string function_name = 1; // assumes master and worker can both resolve the function
 }
